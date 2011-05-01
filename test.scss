@@ -1,0 +1,46 @@
+@import "math";
+
+.test {
+    background-color:green;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: exp(1);
+}
+
+#test-power {
+    @if power(10, 2) != 100 { background-color:red; };
+    @if power(10, 0) != 1 { background-color:red; };
+    @if power(10, -1) != 0.1 { background-color:red; }
+    @if power(10, -2) != 0.01 { background-color:red; }
+}
+
+#test-factorial {
+    @if factorial(4) != 24 { background-color:red; };
+    @if factorial(0) != 1 { background-color:red; };
+    @if factorial(-1) != 1 { background-color:red; };
+}
+
+#test-sin {
+    @if sin(0) != 0 { background-color:red; };
+    //@if sin(1.571) != 1.0 { background-color:red; };
+    //@if sin(3.14159) != 0 { background-color:red; };
+}
+
+#test-cos {
+    @if cos(0) != 1 { background-color:red; };
+    //@if cos(1.571) != 0 { background-color:red; };
+    //@if cos(3.14159) != 1 { background-color:red; };
+}
+
+#test-exp {
+    @if exp(0) != 1 { background-color:red; };
+    //@if exp(1) != 2.718 { background-color:red; };
+}
+
+#test-ln {
+    @if ln(exp(1)) != 1.001 { background-color:red; };
+}
+#test-sqrt {
+    @if sqrt(4) != 2 { background-color:red; };
+}
