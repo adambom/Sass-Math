@@ -23,8 +23,6 @@
             
             $x: $x - 1;
         }
-    } @else {
-        $ret: 1;
     }
     
     @return $ret;
