@@ -62,16 +62,26 @@
     $ret: 0;
     $n: 1;
     $dx: .001;
-    
+
     @while $n <= $x {
         $ret: $ret + $dx / $n;
-        
+
         $n: $n + $dx;
     }
-    
+
     @return $ret;
 }
 
-@function sqrt($x) {    
+@function sqrt($x) {
     @return exp(0.5 * ln($x));
+}
+
+@function atan ($x) {
+  $ret: 0;
+
+  @for $n from 0 to 25 {
+    $ret: $ret + power(-1, $n) * power($x, 2 * $n + 1) / (2 * $n + 1);
+  }
+
+  @return $ret;
 }
