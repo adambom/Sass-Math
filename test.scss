@@ -41,6 +41,12 @@
 #test-ln {
     @if ln(exp(1)) != 1.001 { background-color:red; };
 }
+
 #test-sqrt {
     @if sqrt(4) != 2 { background-color:red; };
+}
+
+#test-atan {
+    @if atan(0) != 0 { background-color: red; }
+    //@if atan(1) != 0.79539 { background-color: red; }
 }
